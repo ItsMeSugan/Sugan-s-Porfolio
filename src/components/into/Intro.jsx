@@ -1,7 +1,7 @@
 import "./intro.scss";
 
 function Intro() {
-  return <div className="intro">
+  return <div className="intro" id="intro">
           hblsdf
   </div>;
 }
