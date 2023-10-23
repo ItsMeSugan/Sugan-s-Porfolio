@@ -13,13 +13,13 @@ function App() {
   return (
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
-        <Works />
-        <Testimonial />
-        <Contact />
         <Portfolio />
+        <Works />
+        <Contact />
+        <Testimonial />
       </div>
     </div>
   );

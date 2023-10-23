@@ -1,7 +1,7 @@
 import "./testimonials.scss";
 
 function Testimonial() {
-  return <div className="testimonial" id="testimonial">uiopoi</div>;
+  return <div className="testimonial" id="testimonial"></div>;
 }
 
 export default Testimonial;
