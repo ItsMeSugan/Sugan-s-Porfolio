@@ -66,7 +66,13 @@
         padding: 5px;
         border: none;
 
+        &:focus {
+          outline: none;
+        }
+
         @include mobile {
+          width: 100%;
+          padding-left: 50px;
           margin-bottom: 10px;
         }
       }
@@ -78,7 +84,13 @@
         padding: 5px;
         border: none;
 
+        &:focus {
+          outline: none;
+        }
+
         @include mobile {
+          width: 100%;
+          padding-left: 50px;
           margin-bottom: 10px;
         }
       }
@@ -99,6 +111,11 @@
         &:focus {
           outline: none;
         }
+      }
+
+      span {
+        margin-left: 25px;
+        height: 50px;
       }
     }
   }
