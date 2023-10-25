@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./works.scss";
 
-export default function Works() {
+export default function Works({setMenuOpen}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
@@ -34,13 +34,13 @@ export default function Works() {
   };
 
   return (
-    <div className="works" id="works">
+    <div className="works" id="works" onClick={() => setMenuOpen(false)}>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {data.map((d) => (
-          <div className="container">
+          <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">

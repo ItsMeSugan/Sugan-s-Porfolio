@@ -9,7 +9,7 @@ import {
   contentPortfolio,
 } from "../data";
 
-export default function Portfolio() {
+export default function Portfolio({setMenuOpen}) {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
@@ -58,7 +58,7 @@ export default function Portfolio() {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id="portfolio" onClick={() => setMenuOpen(false)}>
       <h1>Portfolio</h1>
       <ul>
         {list.map((item) => (

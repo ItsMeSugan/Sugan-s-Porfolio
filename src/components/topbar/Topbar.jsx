@@ -2,6 +2,7 @@ import { Mail } from "@mui/icons-material";
 import "./topbar.scss";
 import CallIcon from "@mui/icons-material/Call";
 
+// eslint-disable-next-line react/prop-types
 function Topbar({ menuOpen, setMenuOpen }) {
   return (
     <div className={"topbar " + (menuOpen && "active")} id="topbar">

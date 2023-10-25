@@ -1,30 +1,49 @@
+@import "../../global.scss";
+
 .intro {
-  background-color: #f1f0e8;
+  background-color: $thirdColor;
   display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .left {
     flex: 1;
-    background-color: #f1f0e8;
+    background-color: $thirdColor;
     overflow: hidden;
 
     .imgContainer {
       width: 700px;
       height: 700px;
-      background-color: #9a3b3b;
+      background-color: #a72e2e;
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       float: right;
 
+      @include mobile {
+        align-items: flex-start;
+      }
+
       img {
         height: 90%;
+
+        @include mobile {
+          height: 50%;
+        }
       }
     }
   }
   .right {
     flex: 1;
     position: relative;
+
+    @include mobile {
+      flex: 0.8;
+    }
 
     .wrapper {
       width: 100%;
@@ -34,20 +53,45 @@
       flex-direction: column;
       justify-content: center;
 
+      @include mobile {
+        width: 350px;
+        height: 250px;
+        padding-left: 0px;
+        align-items: start;
+      }
+
       h1 {
         font-size: 60px;
         margin: 10px 0;
+
+        @include mobile {
+          font-size: 40px;
+        }
       }
 
       h2 {
         font-size: 35px;
+
+        @include mobile {
+          font-size: 25px;
+        }
       }
       h3 {
         font-size: 30px;
 
+        @include mobile {
+          font-size: 20px;
+          display: flex;
+        }
+
         span {
           font-size: inherit;
           color: #9a3b3b;
+
+          @include mobile {
+            font-size: 20px;
+            padding-left: 10px;
+          }
         }
 
         .ityped-cursor {
@@ -70,9 +114,18 @@
       bottom: 10px;
       left: 40%;
 
+      @include mobile {
+        left: 45%;
+      }
+
       img {
         width: 60px;
         animation: arrowBlink 1s infinite;
+
+        @include mobile {
+          width: 35px;
+          // display: none;
+        }
 
         @keyframes arrowBlink {
           100% {

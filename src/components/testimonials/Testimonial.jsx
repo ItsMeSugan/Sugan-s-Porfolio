@@ -1,6 +1,6 @@
 import "./testimonials.scss";
 
-function Testimonial() {
+function Testimonial({ setMenuOpen }) {
   const data = [
     {
       id: 1,
@@ -29,7 +29,11 @@ function Testimonial() {
     },
   ];
   return (
-    <div className="testimonials" id="testimonials">
+    <div
+      className="testimonials"
+      id="testimonials"
+      onClick={() => setMenuOpen(false)}
+    >
       <h1>Testimonials</h1>
       <div className="container">
         {data.map((data) => (

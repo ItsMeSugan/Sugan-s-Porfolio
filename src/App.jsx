@@ -14,12 +14,12 @@ function App() {
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Works />
-        <Testimonial />
-        <Contact />
+      <div className="sections" menuOpen={menuOpen} setMenuOpen={setMenuOpen}>
+        <Intro menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Portfolio menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Works menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Testimonial menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       </div>
     </div>
   );

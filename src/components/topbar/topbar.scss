@@ -2,13 +2,17 @@
 
 .topbar {
   background-color: #f1f0e8;
-  color: $mainColor;
+  color: $secondColor;
   width: 100%;
   height: 70px;
   position: fixed;
   top: 0;
   z-index: 5;
   transition: all 0.5s ease;
+
+  // @include mobile {
+  // position: relative;
+  // }
 
   .wrapper {
     padding: 10px 30px;
@@ -32,6 +36,10 @@
         display: flex;
         align-items: center;
         margin-left: 20px;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       span {
@@ -55,10 +63,10 @@
       span {
         width: 100%;
         height: 3px;
-        background-color: $mainColor;
         border-radius: 100px;
         transform-origin: left;
         transition: all 1s ease;
+        background-color: $secondColor;
       }
     }
   }

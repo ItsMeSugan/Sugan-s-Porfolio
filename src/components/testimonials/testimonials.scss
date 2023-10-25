@@ -1,5 +1,7 @@
+@import "../../global.scss";
+
 .testimonials {
-  background-color: antiquewhite;
+  background-color: $thirdColor;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -7,6 +9,12 @@
   h1 {
     margin-top: 20px;
     font-size: 50px;
+
+    @include mobile {
+      font-size: 25px;
+      margin: 0;
+      height: 32px;
+    }
   }
 
   .container {
@@ -17,22 +25,38 @@
     justify-content: center;
     cursor: pointer;
 
+    @include mobile {
+      flex-direction: column;
+      height: 100%;
+    }
+
     .card {
       width: 250px;
       height: 70%;
       margin: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 15px -8px black;
+      box-shadow: 0px 0px 15px -8px $secondColor;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding: 20px;
       transition: all 1s ease;
 
+      @include mobile {
+        width: 300px;
+        // height: ;
+      }
+
       &.featured {
         width: 300px;
         height: 75%;
         margin: 0px 30px;
+
+        @include mobile {
+          width: 300px;
+          height: 80%;
+          margin: 1px 0;
+        }
       }
 
       &:hover {
@@ -48,6 +72,11 @@
           &.left,
           &.right {
             height: 25px;
+
+            @include mobile {
+              width: 15px;
+              height: 15px;
+            }
           }
           &.user {
             height: 60px;
@@ -55,14 +84,24 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 0px 30px;
+
+            @include mobile {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
       }
 
       .center {
         padding: 10px;
-        background-color: rgb(233, 255, 227);
+        background-color: rgb(231, 227, 227);
         border-radius: 10px;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 6px;
+        }
       }
       .bottom {
         display: flex;
@@ -70,8 +109,16 @@
         justify-content: center;
         flex-direction: column;
 
+        @include mobile {
+          font-size: 13px;
+        }
+
         h3 {
           margin-bottom: 10px;
+          @include mobile {
+            font-size: 12px;
+            margin: 0;
+          }
         }
 
         h4 {

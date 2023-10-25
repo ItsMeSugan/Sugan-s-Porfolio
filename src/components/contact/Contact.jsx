@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./contact.scss";
 
-function Contact() {
+function Contact({ setMenuOpen }) {
   const [Message, setMessageUpdate] = useState(false);
 
   const handleSubmit = (e) => {
@@ -10,7 +10,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className="contact" id="contact" onClick={() => setMenuOpen(false)}>
       <div className="left">
         <img src="assets/shake.svg" alt="" />
       </div>
