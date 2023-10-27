@@ -35,15 +35,16 @@
       height: 70%;
       margin: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 15px -8px $secondColor;
+      box-shadow: 0px 0px 15px -8px $mainColor;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding: 20px;
       transition: all 1s ease;
+      border: 1px solid $mainColor;
 
       @include mobile {
-        width: 300px;
+        width: 250px;
         // height: ;
       }
 
@@ -53,7 +54,7 @@
         margin: 0px 30px;
 
         @include mobile {
-          width: 300px;
+          width: 250px;
           height: 80%;
           margin: 1px 0;
         }

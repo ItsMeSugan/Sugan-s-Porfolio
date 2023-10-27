@@ -3,6 +3,7 @@
 .intro {
   background-color: $thirdColor;
   display: flex;
+  position: relative;
 
   @include mobile {
     flex-direction: column;
@@ -32,7 +33,11 @@
         height: 90%;
 
         @include mobile {
-          height: 50%;
+          z-index: 0;
+          position: absolute;
+          height: 55.6%;
+          left: 25px;
+
         }
       }
     }
@@ -124,7 +129,7 @@
 
         @include mobile {
           width: 35px;
-          // display: none;
+          display: none;
         }
 
         @keyframes arrowBlink {
