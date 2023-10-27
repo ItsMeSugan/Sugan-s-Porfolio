@@ -11,8 +11,7 @@
 
     @include mobile {
       font-size: 25px;
-      padding: 0;
-      height: 55px;
+      margin-bottom: 10px;
     }
   }
 
@@ -23,8 +22,7 @@
     display: flex;
 
     @include mobile {
-      margin: 10px 10px;
-      height: 50px;
+      margin: 10px;
       flex-wrap: wrap;
       justify-content: center;
     }

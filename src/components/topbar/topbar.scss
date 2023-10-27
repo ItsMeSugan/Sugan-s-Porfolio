@@ -10,9 +10,6 @@
   z-index: 5;
   transition: all 0.5s ease;
 
-  // @include mobile {
-  // position: relative;
-  // }
 
   .wrapper {
     padding: 10px 30px;
@@ -30,6 +27,14 @@
         text-decoration: none;
         color: inherit;
         margin-right: 20px;
+
+
+        @include mobile {
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          align-items:flex-start;
+        }
       }
 
       .itemContainer {
@@ -38,14 +43,28 @@
         margin-left: 20px;
 
         @include mobile {
-          display: none;
+// margin: 0;
+margin-left: 10px;
         }
-      }
 
+
+        .icon {
+          font-size: 15px;
+        }
+
+      }
+      
       span {
         font-size: 15px;
         font-weight: 500;
         margin-left: 5px;
+        
+        
+        @include mobile {
+          // display: none;
+          font-size: 7px;
+          margin-left: 2px;
+        }
       }
     }
   }
@@ -59,6 +78,11 @@
       justify-content: space-between;
       cursor: pointer;
       overflow: hidden;
+      
+      @include mobile {
+        width: 23px;
+        height: 15px;
+      }
 
       span {
         width: 100%;
@@ -67,6 +91,11 @@
         transform-origin: left;
         transition: all 1s ease;
         background-color: $secondColor;
+
+        @include mobile {
+          height: 2px;
+        }
+
       }
     }
   }
